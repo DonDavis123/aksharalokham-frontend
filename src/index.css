@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════════
+   GLOBAL THEME TRANSITION
+   Applies buttery-smooth color transitions to every element
+   so dark/light mode never snaps — it always fades.
+═══════════════════════════════════════════════════════════ */
+
+*,
+*::before,
+*::after {
+  transition-property: background-color, color, border-color, fill, stroke, box-shadow, opacity;
+  transition-duration: 0.35s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/*
+  Opt-out: elements where instant response is critical.
+  Active clicks, form inputs, and focus rings should never
+  feel delayed — keep them snappy.
+*/
+button:active,
+[role="button"]:active,
+a:active,
+input,
+input:focus,
+textarea,
+textarea:focus,
+select,
+select:focus {
+  transition-duration: 0s;
+}
+
+/*
+  Opt-out: CSS animations and transforms should not be
+  throttled by the global transition rule.
+*/
+*[style*="animation"],
+*[style*="transform"] {
+  transition-property: background-color, color, border-color, fill, stroke, box-shadow, opacity;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   LAYOUT SHELL TRANSITIONS
+   Safety-net Tailwind-equivalent rules for the top-level
+   containers (App, Dashboard, ChatInterface, StudyComponents).
+   These ensure even server-rendered or dynamically injected
+   wrappers transition correctly.
+═══════════════════════════════════════════════════════════ */
+
+/* App / Dashboard outermost shell */
+#root,
+.app-shell {
+  transition: background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              color            0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SCROLLBAR THEMING
+   Keeps the scrollbar consistent with the active theme.
+═══════════════════════════════════════════════════════════ */
+:root {
+  --scrollbar-thumb-light: #cbd5e1;
+  --scrollbar-thumb-dark:  #374151;
+  --scrollbar-track-light: #f1f5f9;
+  --scrollbar-track-dark:  #111827;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-light);
+  transition: background-color 0.35s ease;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-light);
+  border-radius: 3px;
+  transition: background-color 0.35s ease;
+}
+
+/* When .dark class is applied to <html> or <body> */
+.dark ::-webkit-scrollbar-track  { background: var(--scrollbar-track-dark);  }
+.dark ::-webkit-scrollbar-thumb  { background: var(--scrollbar-thumb-dark);  }
