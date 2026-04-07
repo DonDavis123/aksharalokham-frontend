@@ -4,6 +4,8 @@ Aksharalokam is a modern, AI-driven educational platform built to help students 
 
 ## 🌟 Live Demo
 **View the project live here:** [https://akshara-803d3.web.app](https://akshara-803d3.web.app)
+## 📺 Project Walkthrough
+[![Aksharalokam Demo](https://img.youtube.com/vi/R07azGXrhow/0.jpg)](https://www.youtube.com/watch?v=R07azGXrhow)
 
 
 
