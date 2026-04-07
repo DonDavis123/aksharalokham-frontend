@@ -25,7 +25,7 @@ The frontend is built as a **Single Page Application (SPA)** that communicates w
 * **Performance:** Optimized for speed using **Vite** and **Tailwind CSS** for minimal bundle sizes.
 
 ## 🔗 Connected Repositories
-* **Backend AI Engine:** [Link to your aksharalokham-backend repo]
+* **Backend AI Engine:** [https://github.com/DonDavis123/aksharalokham-backend]
 
 ## 🛠️ Tech Stack
 * **Framework:** React 18 (Vite)
