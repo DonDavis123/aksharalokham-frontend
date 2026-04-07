@@ -1,16 +1,43 @@
-# React + Vite
+# Aksharalokam AI - Frontend Interface 📱
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aksharalokam is a modern, AI-driven educational platform built to help students interact with their textbooks in Malayalam. This repository contains the React-based user interface, designed for high performance and accessibility.
 
-Currently, two official plugins are available:
+## 🌟 Live Demo
+**View the project live here:** [https://akshara-803d3.web.app](https://akshara-803d3.web.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📺 Project Walkthrough
+[Drag and drop your demo video file here while editing this file on GitHub]
 
-## React Compiler
+## 🚀 Key Features
+* **Interactive Chat Interface:** A seamless, real-time chat experience for querying uploaded documents.
+* **Document Management:** Teachers and students can upload PDFs, which are then processed by the AI backend for context-aware Q&A.
+* **Multimodal Context:** The UI displays both text-based AI answers and original page images from the textbook for visual verification.
+* **Malayalam-First Design:** Full support for Malayalam script and specialized prompt engineering for accurate local language responses.
+* **Dynamic Theming:** A buttery-smooth light/dark mode transition system implemented with Tailwind CSS.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🏗️ Technical Architecture
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+The frontend is built as a **Single Page Application (SPA)** that communicates with a FastAPI RAG engine:
+* **State Management:** React Hooks (`useState`, `useEffect`) manage user authentication and chat history.
+* **Authentication:** Integrated with **Firebase Auth** for secure student and teacher logins.
+* **Theming:** Custom `ThemeContext` providing global dark/light mode states.
+* **Performance:** Optimized for speed using **Vite** and **Tailwind CSS** for minimal bundle sizes.
+
+## 🔗 Connected Repositories
+* **Backend AI Engine:** [Link to your aksharalokham-backend repo]
+
+## 🛠️ Tech Stack
+* **Framework:** React 18 (Vite)
+* **Styling:** Tailwind CSS
+* **Backend-as-a-Service:** Firebase (Auth & Hosting)
+* **Icons & UI:** Lucide React & Framer Motion
+
+## 💻 Local Setup
+1. Clone the repository.
+2. Install dependencies: `npm install`.
+3. Create a `.env` file with your Firebase and API keys.
+4. Run locally: `npm run dev`.
+
+---
+Developed by the Aksharalokam Team.
