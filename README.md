@@ -55,19 +55,31 @@ Unlike standard RAG systems, this engine "sees" the textbook. Using `PyMuPDF` (f
 
 Bash
 pip install -r requirements.txt
+
 Configure Environment: Create a .env file in the root directory:
 
 Code snippet
+
 GCP_PROJECT_ID=your_project_id
+
 GCP_LOCATION=us
+
 GCP_PROCESSOR_ID=your_processor_id
+
 DOC_AI_CREDENTIAL_PATH=credentials/your-doc-ai-key.json
+
 FIREBASE_CREDENTIAL_PATH=credentials/firebase_admin.json
+
 GEMINI_API_KEY=your_gemini_key
+
 DOC_FOLDER=documents
+
+
 DB_PATH=aksharalokam_database.db
+
 Start the Engine:
 
 Bash
 uvicorn backend_server:app --host 127.0.0.1 --port 8000 --reload
+
 Developed with ❤️ by the Aksharalokam Team.
